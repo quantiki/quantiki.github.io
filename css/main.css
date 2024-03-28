@@ -10687,6 +10687,7 @@ h3 {
 }
 
 /* about us other*/
+/* card_1*/
 .card_1{
 	margin-bottom: 30px;
 	background-color: transparent; /* This will set the card's background to white */
@@ -10732,6 +10733,82 @@ h3 {
 	border-color: #0062cc;
   }
   
+
+/* card_2*/
+
+
+.card_2{
+	margin-bottom: 30px;
+	background-color: transparent; /* This will set the card's background to white */
+	border-radius: 10px; /* Optional: if you want rounded corners on the card */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: to add a slight shadow for depth */
+  }
+
+  
+.card_2-img-top {
+	width: 100%;
+	border-radius: 30px; /* If you want rounded images, otherwise remove this line */
+  }
+
+.card_2 .card-img-top {
+	width: 100%; /* Responsive image that covers card width */
+	height: auto; /* Maintain aspect ratio */
+	border-top-left-radius: 4px; /* Match card's border radius */
+	border-top-right-radius: 4px; /* Match card's border radius */
+  }
+  
+  .card_2 .card-body {
+	overflow: hidden; /* Hide overflow content */
+	text-align: center; /* Center the text */
+  }
+  
+
+
+/* Ensure no padding or margin on the row and columns */
+
+
+  /* Custom style for .row.no-gutters if the class isn't available in your version of Bootstrap */
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+  }
+  
+  .row.no-gutters > [class^="col-"],
+  .row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+  }
+  
+  /* Custom style for .card_1 to ensure full width and alignment */
+  .card_1 {
+	margin-bottom: 15px; /* Optional: space below the card */
+	box-shadow: 0 2px 5px rgba(0,0,0,.2); /* Optional: shadow for depth */
+  }
+  
+  .card_1 .card-body {
+	padding: 15px; /* Padding inside the card */
+  }
+  
+
+
+/* about us former students*/
+
+.team-section {
+    padding-left: 160px;
+}
+
+.team-section h2, .team-section h3, .team-section p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.team-section h3 {
+    padding-top: 15px;
+}
+
+.category p {
+    padding-left: 10px;
+}
 /* about us */
 
 
