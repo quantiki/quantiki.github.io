@@ -10683,7 +10683,7 @@ h3 {
 
 .centre-card {
     left: 50%;
-	margin-left: 450px;
+	margin-left: 425px;
 }
 
 /* about us other*/
@@ -10697,7 +10697,8 @@ h3 {
   
   
   .card_1-img-top {
-	width: 100%;
+	width: 100px;
+	height: 100px;
 	border-radius: 30px; /* If you want rounded images, otherwise remove this line */
   }
   
@@ -10828,7 +10829,7 @@ h3 {
   
   .contact-image img {
 	width: 100%; /* Adjust width as necessary, or set a max-width */
-	max-width: 400px; /* Example size, adjust as needed */
+	max-width: 300px; /* Example size, adjust as needed */
 	height: auto;
 	border-radius: 15px; /* Gives the image rounded corners */
   }
