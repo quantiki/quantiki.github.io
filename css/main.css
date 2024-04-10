@@ -1227,6 +1227,13 @@ pre code {
 		width: auto;
 		max-width: 100%
 	}
+	.col-md-4 {
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		margin-left: auto; /* Add this line */
+		margin-right: auto; /* Add this line */
+	}	
 	.col-md-1 {
 		-ms-flex: 0 0 8.333333%;
 		flex: 0 0 8.333333%;
@@ -1242,11 +1249,11 @@ pre code {
 		flex: 0 0 25%;
 		max-width: 25%
 	}
-	.col-md-4 {
+	/* .col-md-4 {
 		-ms-flex: 0 0 33.333333%;
 		flex: 0 0 33.333333%;
 		max-width: 33.333333%
-	}
+	} */
 	.col-md-5 {
 		-ms-flex: 0 0 41.666667%;
 		flex: 0 0 41.666667%;
@@ -4971,12 +4978,12 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-	color: rgba(255, 255, 255, .5)
+	color: rgba(255, 255, 255, .65)
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-	color: rgba(255, 255, 255, .75)
+	color: rgba(255, 255, 255, .85)
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -10660,10 +10667,11 @@ h3 {
 }
 
 .footer {
-	background-color: #000;
-	color: #fff;
+	background: radial-gradient(circle, #07325a, #3079bb); 
+	box-shadow: 0 -7px 14px rgba(0, 0, 0, 0.2);
+	/* color: #fff; */
 	margin: 0 auto;
-	padding: 20px 0 20px 0
+	padding: 15px 0 5px 0
 }
 
 .footer a {
@@ -10671,7 +10679,8 @@ h3 {
 }
 /* Navigation bar color here */
 .navbar {
-	background-color: #261401 
+	background: linear-gradient(to bottom, #07325a, #3079bb); 
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 /* about us sambuddha*/
