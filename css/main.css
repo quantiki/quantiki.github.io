@@ -15954,3 +15954,30 @@ body {
 .feedback {
 	padding-left: 75px; 
 }
+
+.container_teach {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 38vh; /* Set the container height to full viewport height */
+}
+
+.container_teach h1 {
+    text-align: center;
+}
+
+.container_teach ul {
+	margin-top: 20px;
+    padding-left: 0; /* Remove default padding of ul */
+}
+
+.container_teach ul li {
+    list-style: none; /* Remove default bullet points */
+    margin-bottom: 10px;
+    text-align: left; /* Align list items to the left */
+}
+
+.container_teach p {
+    margin-top: 20px; /* Add some space above the paragraph */
+}
