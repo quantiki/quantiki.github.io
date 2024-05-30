@@ -15925,7 +15925,7 @@ body {
 	display: inline-block;
 	/* padding: 1px; */
 	color: white;
-	background-color: #28a745;
+	background-color: #2596be;
 	border-color: #28a745;
 	text-align: center;
 	cursor: pointer;
@@ -15933,7 +15933,7 @@ body {
   }
   
   .button1:hover {
-	background-color: #218838;
+	background-color: #0f7194;
 	border-color: #1e7e34
   }
   
