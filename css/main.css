@@ -15925,7 +15925,7 @@ body {
 	display: inline-block;
 	/* padding: 1px; */
 	color: white;
-	background-color: #2596be;
+	background-color: #28a745;
 	border-color: #28a745;
 	text-align: center;
 	cursor: pointer;
@@ -15933,7 +15933,7 @@ body {
   }
   
   .button1:hover {
-	background-color: #0f7194;
+	background-color: #218838;
 	border-color: #1e7e34
   }
   
@@ -15980,4 +15980,36 @@ body {
 
 .container_teach p {
     margin-top: 20px; /* Add some space above the paragraph */
+}
+
+.container_vitae {
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.container_vitae img {
+	max-width: 300px;
+	height: 250px;
+	margin-right: 20px;
+	margin-top: 30px;
+}
+.content {
+	text-align: left;
+}
+.content h1 {
+	text-align: left;
+}
+.section-title {
+	font-weight: bold;
+	margin-top: 20px;
+}
+/* ul {
+	list-style-type: square;
+	padding-left: 20px;
+}
+ul li {
+	margin-bottom: 10px;
+} */
+.sub-list {
+	list-style-type: circle;
 }
