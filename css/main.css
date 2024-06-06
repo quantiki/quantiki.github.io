@@ -4624,7 +4624,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-nav .nav-item {
-    padding: 0 7px; /* Adjust spacing as needed */
+    padding: 0 10px; /* Adjust spacing as needed */
 	
 }
 
@@ -15988,7 +15988,7 @@ body {
 	margin: 0 auto;
 }
 .container_vitae img {
-	max-width: 300px;
+	max-width: 350px;
 	height: 250px;
 	margin-right: 20px;
 	margin-top: 30px;
