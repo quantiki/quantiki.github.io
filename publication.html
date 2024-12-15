@@ -50,16 +50,14 @@
         </div> 
     </nav>
     <br>
-    <br>
-    <br>
 
-    <div class="container">
 
+<div class="container">
         <!-----------News feed------------>
         <br>
         <div class="centered-title">
             Latest Publication
-          </div>
+        </div>
           
         <div class="row mt-4">
             <div id="newsfeed1" class="tabcontent col-md-6 ml-auto align-self-stretch border-0 "><img class="mdimg img-fluid" src="./Images/Unidirectional_Subsystem.png"></div>
@@ -76,7 +74,9 @@
             </div>
         </div>        
         <br>
-    </div>  
+    </div>
+
+ 
 
     <div class="research-article">
         <h1> <a href="https://scholar.google.co.in/citations?user=yu8UFdMAAAAJ&hl=en&oi=sra">Publications</a></h1>
@@ -330,5 +330,20 @@
         `;
         parseBibtex(bibtexData);
     </script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <!-- endbuild -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").onmouseover();
+    </script>
+    
 </body>
 </html>
