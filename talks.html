@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!--useful meta tags-->
-    <title>Quantiki Group</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="google-site-verification" content="CMaTwqBTvzyULmgECDshUbn4bQxtETt6kAEyl57euxw" />
-    <link rel="shortcut icon" type="image/jpg" href="../img/logo.webp"/>
+  <!-- Useful meta tags -->
+  <title>Quantiki Group</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="google-site-verification" content="CMaTwqBTvzyULmgECDshUbn4bQxtETt6kAEyl57euxw" />
+  <link rel="shortcut icon" type="image/jpg" href="../img/logo.webp"/>
 
-    <!---------fonts------------->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
- 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
 
-    <!---css files-->
-    <!-- build:css css/main.css -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <!-- endbuild -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
-<!-- NAVBAR -->
-<nav class="navbar navbar-dark fixed-top navbar-expand-md">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark fixed-top navbar-expand-md bg-dark">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" 
+              aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Replaced the image logo with a Font Awesome icon -->
-      <a class="navbar-brand mr-auto" style="font-family:'YourFont'; font-size: 1.85em;" href="index.html"><img src="Logo/iisert-logo1.jpg" height="50" style="border-radius: 30px">&nbsp; Quantiki Group</a>
-  
+      <!-- Brand/Logo -->
+      <a class="navbar-brand" style="font-family:'YourFont'; font-size: 1.85em;" href="index.html">
+        <img src="Logo/iisert-logo1.jpg" height="50" style="border-radius: 30px"> Quantiki Group
+      </a>
+
+      <!-- Collapsible Nav -->
       <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="navbar-nav m-auto">
-          <!-- Using distinct icons for each menu item -->
+        <!-- 
+          1) 'flex-column' ensures a vertical stack on smaller screens.
+          2) 'flex-md-row' reverts to a horizontal row on md (>=768px) and up.
+          3) 'm-auto' centers items horizontally on larger screens.
+        -->
+        <ul class="navbar-nav m-auto flex-column flex-md-row">
           <li class="nav-item">
             <a class="nav-link" href="index.html">
               <span class="fa fa-home"></span> Home
@@ -113,6 +122,20 @@
             </div>
         </div>
     </footer>
+
+
+
+          <!-- Bootstrap 5 Bundle (includes Popper) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- AOS JS -->
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+          <!-- Your custom scripts -->
+          <script src="./js/scripts.js"></script>
+        </body>
+        </html>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->

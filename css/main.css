@@ -4604,7 +4604,7 @@ input[type=submit].btn-block {
 .navbar-brand:focus,
 .navbar-brand:hover {
 	text-decoration: none;
-	padding-left: 100;
+	padding-left: 200;
 	
 }
 
@@ -4618,7 +4618,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-nav .nav-link {
-	padding-right: -6;
+	padding-right: 0;
 	padding-left: 0
 }
 
