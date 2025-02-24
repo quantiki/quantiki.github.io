@@ -496,7 +496,7 @@ mark {
 	width: 100%;
     background-color: #2c3e50;
     color: white;
-    padding: 20px 0;
+    padding: 1rem 0;
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -10985,6 +10985,8 @@ table {
 .wordcloud-container img {
     max-width: 80%; /* Ensures the image is responsive and fits the width */
     height: auto; /* Keeps the aspect ratio of the image */
+	display: block;
+  	margin: 0 auto;
 }
 
 .content {
