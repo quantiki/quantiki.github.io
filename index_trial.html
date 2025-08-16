@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantiki Group · IISER Tirupati</title>
+  <meta name="description" content="Quantiki Group at IISER Tirupati: theoretical condensed matter physics — strongly correlated systems, quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation/chaos, disorder, and many‑body algorithms." />
+  <meta name="google-site-verification" content="CMaTwqBTvzyULmgECDshUbn4bQxtETt6kAEyl57euxw" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Quantiki Group · IISER Tirupati" />
+  <meta property="og:description" content="Theoretical condensed matter physics at IISER Tirupati." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/1e1e2e/ffffff&text=Quantiki+Group" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha512-SnS2Z1xYv7y4rQm8G3Q2dP5y3d1KQfG6z2s0lL9N1aM0lT1s9kq8z8l7Y2e6eHkC2vWw6xq5u3q9N7o3h2xwWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #7c3aed; /* violet-600 */
+      --brand-2: #06b6d4; /* cyan-500 */
+      --bg-gradient: radial-gradient(1000px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%),
+                     radial-gradient(1000px 600px at 110% -20%, rgba(6,182,212,.20), transparent 60%),
+                     linear-gradient(180deg, rgba(2,6,23,.0), rgba(2,6,23,.35));
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif; }
+
+    /* Navbar */
+    .navbar-brand { font-family: 'Libre Baskerville', serif; letter-spacing: .3px; }
+    .nav-link { font-weight: 500; }
+    .navbar.scrolled { box-shadow: 0 8px 30px rgba(0,0,0,.25); background-color: rgba(10,10,14,.9)!important; backdrop-filter: blur(8px); }
+
+    /* Hero */
+    .hero { position: relative; padding-top: 7rem; padding-bottom: 5rem; background: var(--bg-gradient); overflow: hidden; }
+    .hero .orb {
+      position: absolute; width: 42rem; height: 42rem; border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(124,58,237,.35), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(6,182,212,.28), transparent 55%);
+      filter: blur(35px); opacity: .5; left: -10rem; top: -12rem; pointer-events:none;
+    }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-weight: 700; }
+    .gradient-text { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .tagline { opacity: .9; }
+
+    /* Tag cloud */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .tag { padding: .35rem .65rem; border-radius: 999px; background: rgba(124,58,237,.13); border: 1px solid rgba(124,58,237,.25); font-size: .9rem; }
+
+    /* Sections */
+    section { padding-top: 4rem; padding-bottom: 4rem; }
+    .section-title { font-weight: 700; letter-spacing: .2px; }
+
+    /* Research cards */
+    .research-card { height: 100%; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.02); }
+    .research-icon { font-size: 1.8rem; width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: .75rem; background: rgba(124,58,237,.15); border: 1px solid rgba(124,58,237,.25); }
+
+    /* CTA */
+    .cta { background: linear-gradient(180deg, rgba(124,58,237,.15), rgba(6,182,212,.12)); border: 1px solid rgba(255,255,255,.08); }
+
+    /* Footer */
+    footer { border-top: 1px solid rgba(255,255,255,.08); }
+
+    /* Utility */
+    .shadow-soft { box-shadow: 0 20px 45px -12px rgba(0,0,0,.45); }
+    .rounded-2xl { border-radius: 1rem; }
+
+    /* Back to top */
+    #toTop { position: fixed; right: 1rem; bottom: 1rem; z-index: 1030; display: none; }
+
+    /* Reduce motion for users who prefer */
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-aos] { transition: none !important; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "Quantiki Group",
+    "description": "Theoretical condensed matter physics at IISER Tirupati.",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "IISER Tirupati" },
+    "url": "https://example.org/quantiki"
+  }
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="siteNav" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <i class="fa-solid fa-atom text-primary"></i>
+        <span>Quantiki Group</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navItems">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home"><i class="fa fa-home me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research"><i class="fa fa-flask me-1"></i>Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#people"><i class="fa fa-users me-1"></i>People</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work"><i class="fa fa-briefcase me-1"></i>Working with us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications"><i class="fa fa-book me-1"></i>Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching"><i class="fa fa-graduation-cap me-1"></i>Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#talks"><i class="fa fa-microphone me-1"></i>Talks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa fa-envelope me-1"></i>Contact</a></li>
+        </ul>
+        <div class="ms-lg-3 d-flex align-items-center gap-2">
+          <button id="themeToggle" class="btn btn-outline-light btn-sm" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="orb"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="badge rounded-pill text-bg-primary mb-3">IISER Tirupati · Theoretical Condensed Matter</span>
+          <h1 class="display-5 mb-3">Exploring <span class="gradient-text">quantum matter</span> from strongly–correlated systems to chaos</h1>
+          <p class="lead tagline mb-4">We study quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation and chaos, disorder, and algorithms for many‑body physics.</p>
+          <div class="d-flex gap-2">
+            <a href="#research" class="btn btn-primary btn-lg"><i class="fa fa-flask me-2"></i>Our Research</a>
+            <a href="#work" class="btn btn-outline-light btn-lg"><i class="fa fa-briefcase me-2"></i>Join the Group</a>
+          </div>
+          <div class="mt-4 tag-cloud">
+            <span class="tag">Strong correlations</span>
+            <span class="tag">Quantum spin liquids</span>
+            <span class="tag">Thermalisation & chaos</span>
+            <span class="tag">Open quantum systems</span>
+            <span class="tag">Disorder</span>
+            <span class="tag">Many‑body algorithms</span>
+            <span class="tag">Non‑equilibrium</span>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="zoom-in">
+          <div class="card shadow-soft rounded-2xl research-card p-4">
+            <h5 class="mb-3"><i class="fa-solid fa-bullhorn me-2"></i>News & Highlights</h5>
+            <ul class="list-unstyled mb-0 small lh-lg" id="newsList">
+              <li>🎉 New preprint on thermalisation in disordered spin chains (Aug 2025).</li>
+              <li>🧑‍🏫 Graduate positions open for Jan 2026 intake.</li>
+              <li>🧪 Seminar: Dynamics in open quantum systems — next week.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up">
+          <h2 class="section-title h3 mb-3">About the Group</h2>
+          <p class="mb-0">We are a research group at <strong>IISER Tirupati</strong> working in theoretical condensed matter physics. Our interests span strongly correlated many‑body systems, quantum matter, quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation and chaos, disordered systems, and computations and algorithms for many‑body systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-4" data-aos="fade-up">
+        <h2 class="section-title h3 mb-0">Research Areas</h2>
+        <a class="btn btn-sm btn-outline-light" href="#publications">See publications</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-magnet"></i></div>
+              <h5 class="mb-0">Strongly Correlated Systems</h5>
+            </div>
+            <p class="mb-0 small">Emergent phenomena in lattice models, exotic phases, and numerical/analytical approaches.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-shapes"></i></div>
+              <h5 class="mb-0">Quantum Spin Liquids</h5>
+            </div>
+            <p class="mb-0 small">Frustration, topological order, and signatures in spectroscopy & transport.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+              <h5 class="mb-0">Non‑equilibrium Dynamics</h5>
+            </div>
+            <p class="mb-0 small">Quenches, transport, localization, and information spreading in quantum matter.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <h5 class="mb-0">Open Quantum Systems</h5>
+            </div>
+            <p class="mb-0 small">Dissipation, decoherence, Lindblad dynamics, and control of quantum devices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-fire"></i></div>
+              <h5 class="mb-0">Thermalisation & Chaos</h5>
+            </div>
+            <p class="mb-0 small">Eigenstate thermalisation, scrambling, and diagnostics of quantum chaos.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-square-virus"></i></div>
+              <h5 class="mb-0">Disorder & Algorithms</h5>
+            </div>
+            <p class="mb-0 small">Disordered systems and scalable algorithms for many‑body simulations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Working with us -->
+  <section id="work" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <h2 class="section-title h3 mb-3">Working with Us</h2>
+          <p class="mb-3">We welcome motivated students at the <strong>PhD</strong>, <strong>MS/MSc</strong>, and <strong>project</strong> levels. If you are excited by theoretical condensed matter physics and quantum information, reach out with a brief statement of interest and CV.</p>
+          <ul class="small text-body-secondary mb-4">
+            <li>Strong basics in quantum mechanics & statistical physics</li>
+            <li>Comfort with analytical methods and scientific computing</li>
+            <li>Prior exposure to many‑body physics is a plus</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-paper-plane me-2"></i>Contact the PI</a>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="p-4 rounded-2xl cta shadow-soft">
+            <h5 class="mb-2">Open Positions</h5>
+            <p class="small mb-3">Admissions for the <strong>Jan 2026</strong> session will be announced on the IISER Tirupati website. Meanwhile, you can email your interest.</p>
+            <div class="d-flex gap-2">
+              <a href="#contact" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-envelope me-2"></i>Email</a>
+              <a href="#publications" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-book me-2"></i>Recent Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications (placeholder list) -->
+  <section id="publications" class="py-5">
+    <div class="container">
+      <h2 class="section-title h3 mb-4" data-aos="fade-up">Selected Publications</h2>
+      <div class="row g-3" data-aos="fade-up" data-aos-delay="50">
+        <div class="col-12">
+          <ol class="mb-0 small lh-lg">
+            <li><strong>Thermalisation in Disordered Spin Chains</strong> — <em>arXiv:2508.xxxxx</em> (2025)</li>
+            <li><strong>Non‑equilibrium Dynamics of Open Quantum Lattices</strong> — <em>Phys. Rev. X</em> (2024)</li>
+            <li><strong>Signatures of Spin‑Liquid Behaviour</strong> — <em>PRB</em> (2023)</li>
+          </ol>
+        </div>
+      </div>
+      <p class="small text-body-secondary mt-3">Full list coming soon. (You can link to <code>publication.html</code> when ready.)</p>
+    </div>
+  </section>
+
+  <!-- People / Teaching / Talks (compact placeholders) -->
+  <section id="people" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title h3 mb-3">People</h2>
+      <p class="mb-0">Team page coming soon. This section can list the PI, students, and collaborators with photos and profiles (link to <code>people.html</code>).</p>
+    </div>
+  </section>
+
+  <section id="teaching" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title h3 mb-3">Teaching</h2>
+      <p class="mb-0">Course materials and schedules can live here (or link to <code>teaching.html</code>).</p>
+    </div>
+  </section>
+
+  <section id="talks" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title h3 mb-3">Talks</h2>
+      <p class="mb-0">Upcoming and past talks, slides, and recordings (map to <code>talks.html</code>).</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6" data-aos="fade-up">
+          <h2 class="section-title h3 mb-3">Contact</h2>
+          <p class="mb-2">For collaboration or positions, please email:</p>
+          <p class="fs-5 mb-3"><i class="fa-solid fa-envelope me-2"></i><a class="link-light" href="mailto:quantiki@iisert.ac.in">quantiki@iisert.ac.in</a></p>
+          <p class="small text-body-secondary mb-1"><i class="fa-solid fa-location-dot me-2"></i>IISER Tirupati, Tirupati, Andhra Pradesh, India</p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="card research-card p-4">
+            <h5 class="mb-3">Quick message</h5>
+            <form onsubmit="event.preventDefault(); alert('Thanks! This is a demo form.');">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input class="form-control" id="name" placeholder="Your name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="msg" class="form-label">Message</label>
+                <textarea id="msg" class="form-control" rows="4" placeholder="How can we help?" required></textarea>
+              </div>
+              <button class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button id="toTop" class="btn btn-primary rounded-circle" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <footer class="py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="small">&copy; <span id="year"></span> Quantiki · IISER Tirupati</div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a class="link-light text-decoration-none" href="#privacy">Privacy</a>
+        <a class="link-light text-decoration-none" href="#terms">Terms</a>
+        <span class="opacity-75">v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script>
+    // Init AOS after load
+    window.addEventListener('load', () => { AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' }); });
+
+    // Navbar shadow on scroll & back-to-top button
+    const nav = document.getElementById('siteNav');
+    const toTop = document.getElementById('toTop');
+    const onScroll = () => {
+      const scrolled = window.scrollY > 8; 
+      nav.classList.toggle('scrolled', scrolled);
+      toTop.style.display = window.scrollY > 400 ? 'inline-flex' : 'none';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Close mobile nav when clicking a link
+    const navLinks = document.querySelectorAll('#navItems .nav-link');
+    navLinks.forEach(l => l.addEventListener('click', () => {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance('#navItems');
+      bsCollapse.hide();
+    }));
+
+    // Theme toggle with localStorage
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('bs-theme');
+    if (saved) document.documentElement.setAttribute('data-bs-theme', saved);
+    themeToggle?.addEventListener('click', () => {
+      const current = root.getAttribute('data-bs-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-bs-theme', next);
+      localStorage.setItem('bs-theme', next);
+      themeToggle.innerHTML = next === 'dark' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
