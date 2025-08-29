@@ -7,193 +7,265 @@
   <meta name="description" content="Quantiki Group at IISER Tirupati: theoretical condensed matter physics — strongly correlated systems, quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation/chaos, disorder, and many‑body algorithms." />
   <meta name="google-site-verification" content="CMaTwqBTvzyULmgECDshUbn4bQxtETt6kAEyl57euxw" />
 
-  <!-- Fonts & libs -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Quantiki Group · IISER Tirupati" />
+  <meta property="og:description" content="Theoretical condensed matter physics at IISER Tirupati." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/1e1e2e/ffffff&text=Quantiki+Group" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha512-SnS2Z1xYv7y4rQm8G3Q2dP5y3d1KQfG6z2s0lL9N1aM0lT1s9kq8z8l7Y2e6eHkC2vWw6xq5u3q9N7o3h2xwWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --brand: #7c3aed; /* violet-600 */
       --brand-2: #06b6d4; /* cyan-500 */
       --bg-gradient: radial-gradient(1000px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%),
                      radial-gradient(1000px 600px at 110% -20%, rgba(6,182,212,.20), transparent 60%),
                      linear-gradient(180deg, rgba(2,6,23,.0), rgba(2,6,23,.35));
     }
-    html{scroll-behavior:smooth}
-    body{font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;}
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif; }
 
     /* Navbar */
-    .navbar-brand{font-weight:700; letter-spacing:.2px}
-    .navbar.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.25); background-color:rgba(10,10,14,.9)!important; backdrop-filter: blur(8px)}
+    .navbar-brand { font-family: 'Libre Baskerville', serif; letter-spacing: .3px; }
+    .nav-link { font-weight: 500; }
+    .navbar.scrolled { box-shadow: 0 8px 30px rgba(0,0,0,.25); background-color: rgba(10,10,14,.9)!important; backdrop-filter: blur(8px); }
 
     /* Hero */
-    .hero{position:relative; padding-top:7rem; padding-bottom:3.5rem; background:var(--bg-gradient); overflow:hidden}
-    .hero .orb{position:absolute; width:42rem; height:42rem; border-radius:999px; background: radial-gradient(circle at 30% 30%, rgba(124,58,237,.35), transparent 60%), radial-gradient(circle at 70% 70%, rgba(6,182,212,.28), transparent 55%); filter: blur(35px); opacity:.5; left:-10rem; top:-12rem; pointer-events:none}
+    .hero { position: relative; padding-top: 7rem; padding-bottom: 5rem; background: var(--bg-gradient); overflow: hidden; }
+    .hero .orb {
+      position: absolute; width: 42rem; height: 42rem; border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(124,58,237,.35), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(6,182,212,.28), transparent 55%);
+      filter: blur(35px); opacity: .5; left: -10rem; top: -12rem; pointer-events:none;
+    }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-weight: 700; }
     .gradient-text { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .tagline{opacity:.9}
+    .tagline { opacity: .9; }
 
-    /* Word‑cloud (HTML words, no background image) */
-    .wc-wrapper{position:relative; max-width:1100px; margin:1.25rem auto 0; aspect-ratio:16/9; border-radius:16px; overflow:hidden; background:transparent}
-    .wc-overlay{position:absolute; inset:0}
-    .w{position:absolute; left:var(--x); top:var(--y); transform:translate(calc(-50% + var(--tx2,0px)), calc(-50% + var(--ty2,0px))); white-space:nowrap; font-weight:800; letter-spacing:.2px; filter: drop-shadow(0 6px 18px rgba(0,0,0,.55)); pointer-events:none}
-    .w-xl{font-size:clamp(2.2rem,6.8vw,3.4rem)}
-    .w-lg{font-size:clamp(1.6rem,5.2vw,2.4rem)}
-    .w-md{font-size:clamp(1.15rem,4.2vw,1.6rem)}
-    .w-sm{font-size:clamp(.95rem,3.4vw,1.15rem)}
-    .c-white{color:#e5e7eb}
-    .c-blue{color:#22c1ff}
-    .c-cyan{color:#67e8f9}
-    .c-red{color:#fb6a6a}
+    /* Tag cloud */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .tag { padding: .35rem .65rem; border-radius: 999px; background: rgba(124,58,237,.13); border: 1px solid rgba(124,58,237,.25); font-size: .9rem; }
 
     /* Sections */
-    section{padding:2.25rem 0}
-    footer{border-top:1px solid rgba(255,255,255,.08)}
+    section { padding-top: 4rem; padding-bottom: 4rem; }
+    .section-title { font-weight: 700; letter-spacing: .2px; }
+
+    /* Research cards */
+    .research-card { height: 100%; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.02); }
+    .research-icon { font-size: 1.8rem; width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: .75rem; background: rgba(124,58,237,.15); border: 1px solid rgba(124,58,237,.25); }
+
+    /* Utility */
+    .shadow-soft { box-shadow: 0 20px 45px -12px rgba(0,0,0,.45); }
+    .rounded-2xl { border-radius: 1rem; }
+
+    /* Reduce motion for users who prefer */
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-aos] { transition: none !important; } }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "Quantiki Group",
+    "description": "Theoretical condensed matter physics at IISER Tirupati.",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "IISER Tirupati" },
+    "url": "https://example.org/quantiki"
+  }
+  </script>
 </head>
 <body>
   <!-- Navbar -->
   <nav id="siteNav" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#home"><i class="fa-solid fa-atom text-primary"></i><span>Quantiki Group</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <i class="fa-solid fa-atom text-primary"></i>
+        <span>Quantiki Group</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navItems">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="people.html">People</a></li>
-          <li class="nav-item"><a class="nav-link" href="publication.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-          <li class="nav-item"><a class="nav-link" href="talks.html">Talks</a></li>
-          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home"><i class="fa fa-home me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research"><i class="fa fa-flask me-1"></i>Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="people.html"><i class="fa fa-users me-1"></i>People</a></li>
+          <li class="nav-item"><a class="nav-link" href="work.html"><i class="fa fa-briefcase me-1"></i>Working with us</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html"><i class="fa fa-book me-1"></i>Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="teaching.html"><i class="fa fa-graduation-cap me-1"></i>Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="talks.html"><i class="fa fa-microphone me-1"></i>Talks</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa fa-envelope me-1"></i>Contact</a></li>
         </ul>
+        <div class="ms-lg-3 d-flex align-items-center gap-2">
+          <button id="themeToggle" class="btn btn-outline-light btn-sm" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero (just headline & CTA to other tabs) -->
+  <!-- Hero -->
   <header id="home" class="hero">
     <div class="orb"></div>
     <div class="container position-relative">
       <div class="row align-items-center g-4">
-        <div class="col-lg-9">
-          <h1 class="display-5 mb-3"><span class="gradient-text">Quantum matter</span> — strongly correlated systems, spin liquids, open quantum systems, non‑equilibrium dynamics & quantum chaos</h1>
-          <p class="lead tagline mb-4">Explore our work via the tabs: Research · People · Publications · Teaching · Talks · Contact.</p>
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="badge rounded-pill text-bg-primary mb-3">IISER Tirupati · Theoretical Condensed Matter</span>
+          <h1 class="display-5 mb-3">Exploring <span class="gradient-text">quantum matter</span> from strongly–correlated systems to chaos</h1>
+          <p class="lead tagline mb-4">We study quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation and chaos, disorder, and algorithms for many‑body physics.</p>
+          <div class="d-flex gap-2">
+            <a href="#research" class="btn btn-primary btn-lg"><i class="fa fa-flask me-2"></i>Our Research</a>
+            <a href="work.html" class="btn btn-outline-light btn-lg"><i class="fa fa-briefcase me-2"></i>Join the Group</a>
+          </div>
+          <div class="mt-4 tag-cloud">
+            <span class="tag">Strong correlations</span>
+            <span class="tag">Quantum spin liquids</span>
+            <span class="tag">Thermalisation & chaos</span>
+            <span class="tag">Open quantum systems</span>
+            <span class="tag">Disorder</span>
+            <span class="tag">Many‑body algorithms</span>
+            <span class="tag">Non‑equilibrium</span>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="zoom-in">
+          <div class="card shadow-soft rounded-2xl research-card p-4">
+            <h5 class="mb-3"><i class="fa-solid fa-bullhorn me-2"></i>News & Highlights</h5>
+            <ul class="list-unstyled mb-0 small lh-lg" id="newsList">
+              <li>🎉 New preprint on thermalisation in disordered spin chains (Aug 2025).</li>
+              <li>🧑‍🏫 Graduate positions open for Jan 2026 intake.</li>
+              <li>🧪 Seminar: Dynamics in open quantum systems — next week.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Floating word cloud (collision‑free) -->
-  <section class="pt-1 pb-4">
-    <div class="container">
-      <div class="wc-wrapper" aria-label="Research word cloud">
-        <div class="wc-overlay">
-          <!-- Big words -->
-          <span class="w w-xl c-white" style="--x:22%; --y:55%">vacancies</span>
-          <span class="w w-xl c-white" style="--x:66%; --y:53%">spin liquid</span>
-          <span class="w w-lg c-blue"  style="--x:44%; --y:57%">system</span>
-          <span class="w w-lg c-blue"  style="--x:60%; --y:70%">holographic tensor model</span>
-          <span class="w w-lg c-blue"  style="--x:30%; --y:34%">undoped graphene</span>
-          <span class="w w-lg c-blue"  style="--x:75%; --y:41%">induced spin texture</span>
-          <span class="w w-lg c-blue"  style="--x:73%; --y:30%">ground state</span>
-          <span class="w w-lg c-blue"  style="--x:31%; --y:26%">heisenberg antiferromagnet</span>
-
-          <!-- Medium words -->
-          <span class="w w-md c-blue"  style="--x:78%; --y:48%">antiferromagnetic order</span>
-          <span class="w w-md c-blue"  style="--x:35%; --y:73%">doublet</span>
-          <span class="w w-md c-blue"  style="--x:32%; --y:80%">kaon</span>
-
-          <!-- Accent red terms -->
-          <span class="w w-md c-red"   style="--x:50%; --y:60%">energy state</span>
-          <span class="w w-sm c-red"   style="--x:66%; --y:86%">emergent moment</span>
-          <span class="w w-sm c-red"   style="--x:50%; --y:79%">matrix model</span>
-          <span class="w w-sm c-red"   style="--x:58%; --y:83%">optical potential</span>
-          <span class="w w-sm c-red"   style="--x:60%; --y:27%">anomalous transport</span>
-
-          <!-- Small blue/cyan background words -->
-          <span class="w w-sm c-cyan"  style="--x:19%; --y:46%">magnetic instability</span>
-          <span class="w w-sm c-cyan"  style="--x:26%; --y:64%">magnetic phase</span>
-          <span class="w w-sm c-cyan"  style="--x:28%; --y:68%">fermionic parton approach</span>
-          <span class="w w-sm c-cyan"  style="--x:40%; --y:30%">mill theory</span>
-          <span class="w w-sm c-cyan"  style="--x:61%; --y:36%">abelian gauge field</span>
-          <span class="w w-sm c-cyan"  style="--x:82%; --y:55%">random matrix</span>
-          <span class="w w-sm c-cyan"  style="--x:85%; --y:63%">open system</span>
-          <span class="w w-sm c-cyan"  style="--x:72%; --y:64%">supplemental material</span>
-          <span class="w w-sm c-cyan"  style="--x:64%; --y:66%">invariant extension</span>
-          <span class="w w-sm c-cyan"  style="--x:38%; --y:84%">defects</span>
-          <span class="w w-sm c-cyan"  style="--x:47%; --y:72%">quantum chaos</span>
-          <span class="w w-sm c-cyan"  style="--x:25%; --y:53%">interplay of uniform</span>
-          <span class="w w-sm c-cyan"  style="--x:21%; --y:76%">asymmetric hyperonic matter</span>
-          <span class="w w-sm c-cyan"  style="--x:47%; --y:25%">pure yang</span>
-          <span class="w w-sm c-cyan"  style="--x:70%; --y:25%">harper model</span>
-          <span class="w w-sm c-cyan"  style="--x:60%; --y:59%">aubry</span>
-          <span class="w w-sm c-cyan"  style="--x:45%; --y:47%">quantum spin liquid</span>
-          <span class="w w-sm c-cyan"  style="--x:35%; --y:88%">neutron star matter</span>
-          <span class="w w-sm c-cyan"  style="--x:15%; --y:22%">earth pyrochlore magnet</span>
-          <span class="w w-sm c-cyan"  style="--x:71%; --y:74%">pyrochlore lattice</span>
-          <span class="w w-sm c-cyan"  style="--x:55%; --y:68%">global spectrum</span>
-          <span class="w w-sm c-cyan"  style="--x:63%; --y:74%">andre</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About only (end page here) -->
+  <!-- About -->
   <section id="about" class="py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <h2 class="h3 mb-3">About the Group</h2>
+        <div class="col-lg-10" data-aos="fade-up">
+          <h2 class="section-title h3 mb-3">About the Group</h2>
           <p class="mb-0">We are a research group at <strong>IISER Tirupati</strong> working in theoretical condensed matter physics. Our interests span strongly correlated many‑body systems, quantum matter, quantum spin liquids, non‑equilibrium dynamics, open quantum systems, thermalisation and chaos, disordered systems, and computations and algorithms for many‑body systems.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="py-4 mt-2">
-    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-      <div class="small">&copy; <span id="year"></span> Quantiki · IISER Tirupati</div>
-      <div class="d-flex align-items-center gap-3 small">
-        <a class="link-light text-decoration-none" href="privacy.html">Privacy</a>
-        <a class="link-light text-decoration-none" href="terms.html">Terms</a>
+  <!-- Research (STOP PAGE HERE) -->
+  <section id="research" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-4" data-aos="fade-up">
+        <h2 class="section-title h3 mb-0">Research Areas</h2>
+        <a class="btn btn-sm btn-outline-light" href="publications.html">See publications</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-magnet"></i></div>
+              <h5 class="mb-0">Strongly Correlated Systems</h5>
+            </div>
+            <p class="mb-0 small">Emergent phenomena in lattice models, exotic phases, and numerical/analytical approaches.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-shapes"></i></div>
+              <h5 class="mb-0">Quantum Spin Liquids</h5>
+            </div>
+            <p class="mb-0 small">Frustration, topological order, and signatures in spectroscopy & transport.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+              <h5 class="mb-0">Non‑equilibrium Dynamics</h5>
+            </div>
+            <p class="mb-0 small">Quenches, transport, localization, and information spreading in quantum matter.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <h5 class="mb-0">Open Quantum Systems</h5>
+            </div>
+            <p class="mb-0 small">Dissipation, decoherence, Lindblad dynamics, and control of quantum devices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-fire"></i></div>
+              <h5 class="mb-0">Thermalisation & Chaos</h5>
+            </div>
+            <p class="mb-0 small">Eigenstate thermalisation, scrambling, and diagnostics of quantum chaos.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="card research-card h-100 p-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="research-icon"><i class="fa-solid fa-square-virus"></i></div>
+              <h5 class="mb-0">Disorder & Algorithms</h5>
+            </div>
+            <p class="mb-0 small">Disordered systems and scalable algorithms for many‑body simulations.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
+  <!-- END CONTENT -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script>
-    // navbar shadow
-    const nav=document.getElementById('siteNav');
-    const onScroll=()=> nav.classList.toggle('scrolled', window.scrollY>8); document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Init AOS after load
+    window.addEventListener('load', () => { AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' }); });
 
-    // ==== Collision‑free layout + constant‑speed micro motion ====
-    (function(){
-      const wrap=document.querySelector('.wc-wrapper'); if(!wrap) return; const words=[...wrap.querySelectorAll('.w')];
-      const RADIUS=3; // px drift radius
-      const PAD=14;   // visual padding around each word
-      const SAFE=PAD + 2*RADIUS; // ensures separation even while moving
+    // Navbar shadow on scroll
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => { nav.classList.toggle('scrolled', window.scrollY > 8); };
+    document.addEventListener('scroll', onScroll, { passive: true });
 
-      function desired(el){ const cs=getComputedStyle(el); const x=parseFloat(cs.getPropertyValue('--x'))||50; const y=parseFloat(cs.getPropertyValue('--y'))||50; return {x:wrap.clientWidth*x/100, y:wrap.clientHeight*y/100}; }
-      function measure(el){ el.style.setProperty('--tx2','0px'); el.style.setProperty('--ty2','0px'); return {w:el.offsetWidth, h:el.offsetHeight}; }
+    // Close mobile nav when clicking a link
+    const navLinks = document.querySelectorAll('#navItems .nav-link');
+    navLinks.forEach(l => l.addEventListener('click', () => {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance('#navItems');
+      bsCollapse.hide();
+    }));
 
-      function layout(){
-        const placed=[]; const W=wrap.clientWidth, H=wrap.clientHeight; const order=[...words].sort((a,b)=> (b.offsetWidth*b.offsetHeight)-(a.offsetWidth*a.offsetHeight));
-        function collides(nx,ny,wh){ const rect={left:nx-wh.w/2-SAFE,right:nx+wh.w/2+SAFE,top:ny-wh.h/2-SAFE,bottom:ny+wh.h/2+SAFE}; return placed.some(p=>!(rect.right<p.left||rect.left>p.right||rect.bottom<p.top||rect.top>p.bottom)); }
-        order.forEach(el=>{ const wh=measure(el), base=desired(el); let x=base.x, y=base.y, ang=0, r=0, tries=0; const max=2000; const clamp=()=>{x=Math.max(wh.w/2+SAFE, Math.min(W-wh.w/2-SAFE,x)); y=Math.max(wh.h/2+SAFE, Math.min(H-wh.h/2-SAFE,y));}; clamp(); while(collides(x,y,wh) && tries++<max){ ang+=Math.PI/10; r+=2; x=base.x+Math.cos(ang)*r; y=base.y+Math.sin(ang)*r; clamp(); } el.style.left=x+'px'; el.style.top=y+'px'; placed.push({left:x-wh.w/2-SAFE,right:x+wh.w/2+SAFE,top:y-wh.h/2-SAFE,bottom:y+wh.h/2+SAFE}); });
-      }
-
-      const params=words.map(()=>({a:Math.random()*Math.PI*2,w:0.8+Math.random()*0.15})); let last=performance.now();
-      function animate(now){ const dt=(now-last)/1000; last=now; words.forEach((el,i)=>{ const p=params[i]; p.a+=p.w*dt; el.style.setProperty('--tx2', (Math.cos(p.a)*RADIUS).toFixed(2)+'px'); el.style.setProperty('--ty2', (Math.sin(p.a)*RADIUS).toFixed(2)+'px'); }); requestAnimationFrame(animate); }
-
-      let resizeTimer; const relayout=()=>{ clearTimeout(resizeTimer); resizeTimer=setTimeout(layout, 120); };
-      window.addEventListener('resize', relayout);
-      if(document.fonts && document.fonts.ready){ document.fonts.ready.then(()=>{ layout(); requestAnimationFrame(animate); }); } else { window.addEventListener('load', ()=>{ layout(); requestAnimationFrame(animate); }); }
-    })();
+    // Theme toggle with localStorage
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('bs-theme');
+    if (saved) document.documentElement.setAttribute('data-bs-theme', saved);
+    themeToggle?.addEventListener('click', () => {
+      const current = root.getAttribute('data-bs-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-bs-theme', next);
+      localStorage.setItem('bs-theme', next);
+      themeToggle.innerHTML = next === 'dark' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+    });
   </script>
 </body>
 </html>
