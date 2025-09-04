@@ -10798,6 +10798,41 @@ h3 {
 	margin-bottom: 15px; /* Optional: space below the card */
 	box-shadow: 0 2px 5px rgba(0,0,0,.2); /* Optional: shadow for depth */
   }
+
+  /* Former Members — compact, equal-height per row, not too wide */
+  .fm-wrap { max-width: 1140px; margin: 0 auto; }           /* narrower than full page */
+  .fm-row { row-gap: 12px; }
+
+  .fm-card{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+    padding:0;                                              /* no padding */
+    display:flex;
+    flex-direction:column;
+  }
+  .fm-h{
+    margin:6px 10px 4px;                                    /* tiny header spacing */
+    font-weight:700;
+    font-size:1rem;
+  }
+  .fm-list{
+    list-style:none;
+    margin:0;
+    padding:0 10px 10px;                                    /* minimal inner space for text */
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:4px 16px;                                           /* tight rows / cols */
+    align-content:start;
+  }
+  .fm-list li{ white-space:nowrap; }                        /* keep each name on one line */
+
+  @media (max-width: 576px){
+    .fm-wrap { max-width: 100%; padding: 0 8px; }           /* edge-to-edge on phones */
+    .fm-list { grid-template-columns: 1fr; }                /* clean stack on small screens */
+  }
+
+
   
   .card_1 .card-body {
 	padding: 15px; /* Padding inside the card */
