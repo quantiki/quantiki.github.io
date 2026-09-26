@@ -25,6 +25,21 @@
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Responsive position listing */
+    .custom-box{overflow-wrap:anywhere;word-wrap:break-word;}
+    .custom-box table{width:100%;table-layout:fixed;}
+    .custom-box th,.custom-box td{overflow-wrap:anywhere;word-break:break-word;}
+    .custom-box a{overflow-wrap:anywhere;word-break:break-word;}
+    @media (max-width:767.98px){
+      .custom-box{width:100%;max-width:100%;box-sizing:border-box;margin-left:auto!important;margin-right:auto!important;padding:15px!important;}
+      .custom-box h2{font-size:1.45rem;line-height:1.3;overflow-wrap:anywhere;}
+      .custom-box table{font-size:.94rem;}
+      .custom-box th,.custom-box td{display:table-cell!important;vertical-align:top;padding:8px!important;}
+      .custom-box th{width:32%!important;}
+    }
+  </style>
 </head>
 <body>
   <!-- NAVBAR -->
